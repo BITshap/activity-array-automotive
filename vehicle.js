@@ -1,5 +1,5 @@
 class Vehicle {
-    constructor(make, model, year, color, mileage) {
+    constructor(make, model, year, color, mileage, size) {
         this.make = make;
         this.model = model;
         this.year = year;
@@ -9,8 +9,8 @@ class Vehicle {
         this.mileage = mileage;
         this.started = false;
         this.numberOfWheels = 0;
+        this.size = size; 
     }
-
     start() {
         if (this.fuel > 0) {
             return this.started = true;
@@ -82,6 +82,9 @@ class Vehicle {
         } else {
             console.log("Unknown type of vehicle");
         }
+    }
+    make() {
+        console.log('hi')
     }
 }
 
