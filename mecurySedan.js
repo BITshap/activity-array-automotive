@@ -43,7 +43,7 @@ class Truck extends VehicleModule {
         super(make, model, year, color, mileage, size)
         this.maximumPassengers = 8;
         this.passenger = 0;
-        this.numberOfWheels = 6;
+        this.numberOfWheels = 8;
         this.maxSpeed = 100;
         this.fuel = 5;
         this.maintenance = false;
@@ -64,10 +64,13 @@ myCar.loadPassenger(2)
 myCar.stop()
 myCar.scheduleService(40000)
 myCar.start()
+myCar.typeOfVehicle(6)
 
 myTruck.sizeCheck()
+myTruck.typeOfVehicle(8)
 
 console.log(myCar)
+console.log(myTruck)
 
 
 
