@@ -21,18 +21,19 @@ class Car extends VehicleModule {
         }
     }
 
-    started() {
-        if (this.fuel > 0) {
-            start == true;
-        } else {
-            console.log('Whoops! Looks like the roadtrip has to wait a little bit!')
-        }
-    }
-
     scheduleService(mileage){
         if (this.mileage > 30000) {
             this.maintenance == true;
             console.log('go check your car!')
+        }
+    }
+
+    start() {
+        if (this.fuel > 0) {
+            this.start == true;
+            console.log('you can go!')
+        } else {
+            console.log('Whoops! Looks like the roadtrip has to wait a little bit!')
         }
     }
 }
@@ -57,12 +58,14 @@ class Truck extends VehicleModule {
 
 
 
-let myCar = new Car('mercury', 'g-wagon', '2005', 'maroon', 50000, 'large')
-
-myCar.loadPassenger(5)
-myCar.started()
+let myCar = new Car('mercury', 'g-wagon', '2005', 'maroon', 50000, 'medium')
+let myTruck = new Truck('mecury', 's-wagon', '2007', 'turqoise', 20000, 'large')
+myCar.loadPassenger(2)
 myCar.stop()
-myCar.checkService()
+myCar.scheduleService(40000)
+myCar.start()
+
+myTruck.sizeCheck()
 
 console.log(myCar)
 
